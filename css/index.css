@@ -8,11 +8,38 @@ body {
 	font-family: sans-serif;
 	line-height: 1.7;
 }
+.btn-active{
+border: 1px solid transparent;
+
+}
+
+
+/* корзина */
+.container_counter {
+	display:flex;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	border: 1px solid black;
+	height: 60px;
+	width: 60px;
+	background-image: url(../img/cart.svg);
+	background-size: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 20px;
+}
+
 /* слайдер */
 .container_slider {
-	margin-top: 80px;
 	display:flex;
 	height: 300px;
+	margin-top: 80px;
 }
 .container_slider .img{
 	background-size: cover;
@@ -34,8 +61,7 @@ body {
 .container-products {
 	display: flex;
     flex-wrap: wrap;
-	text-align: center;
-	justify-content: space-between;
+    text-align: center;
 }    
 .item {
 	width: 270px;
@@ -74,14 +100,4 @@ body {
 	background: orange;
 	font-family: inherit;
 	font-size: inherit;
-}
-/* витрина */
-/* корзина */
-.container_counter {
-	position: fixed; 
-	right: 0px;
-	top: 0px;
-	border:1px solid black;
-	width:80px;
-	height:80px;
 }

@@ -25,7 +25,6 @@ document.querySelector('.btn_left').addEventListener('click', function () {//К�
     img.setAttribute('data-index', index--);
 });
 //слайдер с перемоткой
-
 //витрина
 class ServiceProducts {
     constructor(containerProducts, productsCatalog) {
@@ -68,6 +67,7 @@ class ServiceProducts {
     }
 
     actions() {
+        //
     }
 }
 
