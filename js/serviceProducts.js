@@ -54,7 +54,8 @@ class ServiceProducts {
             var item = this.getElement({ tagName: 'div', className: 'item' });
             var name = this.getElement({ tagName: 'div', className: 'name', innerText: this.productsCatalog[i].name });
             var img = this.getElement({ tagName: 'div', className: 'img', backgroundImage: `url(${this.productsCatalog[i].img})` });
-            var price = this.getElement({ tagName: 'div', className: 'price', innerText: this.productsCatalog[i].price.toLocaleString() + ' USD' });
+            var price = this.getElement({
+                tagName: 'div', className: 'price', innerText: this.productsCatalog[i].price.toLocaleString() + ' ₽' });
             var btn = this.getElement({ tagName: 'button', className: 'btn' + activeClass, innerText: activeText, id: this.productsCatalog[i].id });
 
             btn.addEventListener('click', function () {
