@@ -1,18 +1,17 @@
 class ServiceStore {
-    constructor () {}
+    constructor() { }
     getProducts() {
         var products = [];
         var productsLocalStorage = localStorage.getItem('products');
-        if(productsLocalStorage !== null) {
+        if (productsLocalStorage !== null) {
             products = JSON.parse(productsLocalStorage);
         }
         return products;
-
     }
     putProduct(id) {
         var products = this.getProducts();
         var index = products.indexOf(id);
-        if (index ===-1) {
+        if (index === -1) {
             products.push(id);
             var pushProduct = true;
         } else {
@@ -21,10 +20,9 @@ class ServiceStore {
         }
         localStorage.setItem('products', JSON.stringify(products));
         return {
-            pushProduct: pushProduct, 
+            pushProduct: pushProduct,
             products: products
-        }
+        };
     }
 }
-
 var serviceStore = new ServiceStore();

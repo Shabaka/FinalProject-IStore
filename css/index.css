@@ -47,19 +47,26 @@ border: 1px solid transparent;
 	
 	}
 .btn_right,.btn_left {
-	/* background-color: orange; */
-	width: 50px;
+	background-color: transparent;
+	width: 60px;
 	font-size: 25px;
-	
+	background: transparent;
+	top: 0;
+    z-index: 60;
+
 }
 .btn_left {
 	float: left;
 	background-image: url(../img/slider/nav1.png);
 	background-repeat: no-repeat;
+	left: 40px;
+    background-position: 14px 50%;
 }
 .btn_right {
 	background-image: url(../img/slider/nav1.png);
 	background-repeat: no-repeat;
+	right: 40px;
+    background-position: -38px 50%;
 }
 
 /* витрина */
