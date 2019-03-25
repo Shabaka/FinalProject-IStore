@@ -20,7 +20,7 @@ border: 1px solid transparent;
 	position: fixed;
 	top: 0px;
 	right: 0px;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	height: 60px;
 	width: 60px;
 	background-image: url(../img/cart.svg);

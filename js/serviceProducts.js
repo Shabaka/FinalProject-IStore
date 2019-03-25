@@ -41,7 +41,15 @@ class ServiceProducts {
             var name = this.getElement({ tagName: 'div', className: 'name', innerText: this.productsCatalog[i].name });
             var img = this.getElement({ tagName: 'div', className: 'img', backgroundImage: `url(${this.productsCatalog[i].img})` });
             var price = this.getElement({ tagName: 'div', className: 'price', innerText: this.productsCatalog[i].price.toLocaleString() + ' ₽' });
-            var btn = this.getElement({ tagName: 'button', className: 'btn', innerText: 'Купить' });
+            var btn = this.getElement({ tagName: 'button', className: 'btn', innerText: 'Купить', id:this.productsCatalog[i].id });
+
+            
+            
+            btn.addEventListener('click', function() {
+                var id = this.getAttribute('data-id');
+                alert(id);
+            })
+
 
             item.appendChild(name);
             item.appendChild(img);
@@ -62,6 +70,9 @@ class ServiceProducts {
         }
         if ('backgroundImage' in options) {
             element.style.backgroundImage = options.backgroundImage;
+        }
+        if ('id' in options) {
+            element.setAttribute('data-id', options.id);
         }
         return element;
     }
