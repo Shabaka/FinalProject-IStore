@@ -1,7 +1,7 @@
 //слайдер с перемоткой
 var imgStore = ['img/slider/1.jpg', 'img/slider/2.jpg', 'img/slider/3.jpg', 'img/slider/4.jpg', 'img/slider/5.jpg', 'img/slider/6.jpg'];
 
-var img = document.querySelector('.img');
+var img = document.querySelector('.img1');
 img.setAttribute('src', imgStore[0]);
 img.setAttribute('data-index', 0);
 
@@ -47,8 +47,10 @@ class ServiceProducts {
             
             btn.addEventListener('click', function() {
                 var id = this.getAttribute('data-id');
-                alert(id);
-            })
+                var result = serviceStore.putProduct(id);
+                if (result.pushProduct) {}
+                    this.classList.add('btn-a')
+            });
 
 
             item.appendChild(name);
