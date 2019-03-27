@@ -8,22 +8,53 @@ body {
 	font-family: sans-serif;
 	line-height: 1.7;
 }
-.btn-active{
+.btn-active {
 border: 1px solid transparent;
-
 }
 
+/* внутри корзины */
+.container-cart {
+	display: none;
+	position: fixed;
+	align-items: flex-start;
+	width: 97%;
+	height: 97vh;
+	background: #fff;
+	box-shadow: 
+		0 16px 24px 2px rgba(33,37,41,.02), 
+		0 6px 30px 5px rgba(33,37,41,.04), 
+		0 8px 10px -5px rgba(33,37,41,.1);
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	margin: auto;
+}
+
+.cart-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 35px;
+	width: 35px;
+	background-image: url(../img/close.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	cursor: pointer;
+}
+
+
+/* внутри корзины */
 
 /* корзина */
 .container_counter {
 	display:flex;
 	position: fixed;
-	top: 0px;
-	right: 0px;
-	height: 60px;
-	width: 60px;
+	top: 20px;
+	right: 20px;
+	height: 35px;
+	width: 35px;
 	background-image: url(../img/cart.svg);
-	background-size: no-repeat;
 	background-position: center center;
 	background-size: contain;
 	justify-content: center;
@@ -32,17 +63,19 @@ border: 1px solid transparent;
 	font-weight: bold;
 	cursor: pointer;
 	margin: 20px;
-}
+	}
+/* корзина */
 
 /* слайдер */
 .container_slider {
+	/* position: fixed; */
 	display:flex;
 	margin-top: 80px;	
 }
 .img1 {
 	background-size: cover;
 	float: left;
-	height: 500px;
+	height: 100%;
 	width: auto;
 	
 	}
@@ -52,7 +85,7 @@ border: 1px solid transparent;
 	font-size: 25px;
 	/* background: transparent; */
 	top: 0;
-    z-index: 60;
+    /* z-index: 60; */
 
 }
 .btn_left {
@@ -68,6 +101,7 @@ border: 1px solid transparent;
 	right: 40px;
     background-position: -38px 50%;
 }
+/* слайдер */
 
 /* витрина */
 .container-products {
@@ -96,7 +130,7 @@ border: 1px solid transparent;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	filter: grayscale(50%);
+	/* filter: grayscale(50%); */
 }
 .price {
 	padding: 10px 10px;

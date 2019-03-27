@@ -45,18 +45,17 @@ class ServiceProducts {
             var index = products.indexOf(this.productsCatalog[i].id);
             if (index === -1) {
                 var activeClass = '';
-                var activeText = 'Добавить в корзину';
+                var activeText = 'Купить';
             } else {
                 var activeClass = ' btn-active';
-                var activeText = 'Удалить из корзины';
+                var activeText = 'Удалить';
             }
 
-            var item = this.getElement({ tagName: 'div', className: 'item' });
-            var name = this.getElement({ tagName: 'div', className: 'name', innerText: this.productsCatalog[i].name });
-            var img = this.getElement({ tagName: 'div', className: 'img', backgroundImage: `url(${this.productsCatalog[i].img})` });
-            var price = this.getElement({
-                tagName: 'div', className: 'price', innerText: this.productsCatalog[i].price.toLocaleString() + ' ₽' });
-            var btn = this.getElement({ tagName: 'button', className: 'btn' + activeClass, innerText: activeText, id: this.productsCatalog[i].id });
+            var item  = serviceCreateElement.getElement({ tagName: 'div', className: 'item' });
+            var name  = serviceCreateElement.getElement({ tagName: 'div', className: 'name', innerText: this.productsCatalog[i].name });
+            var img   = serviceCreateElement.getElement({ tagName: 'div', className: 'img', backgroundImage: `url(${this.productsCatalog[i].img})` });
+            var price = serviceCreateElement.getElement({ tagName: 'div', className: 'price', innerText: this.productsCatalog[i].price.toLocaleString() + ' ₽' });
+            var btn   = serviceCreateElement.getElement({ tagName: 'button', className: 'btn' + activeClass, innerText: activeText, id: this.productsCatalog[i].id });
 
             btn.addEventListener('click', function () {
                 var id = this.getAttribute('data-id');
@@ -66,10 +65,10 @@ class ServiceProducts {
 
                 if (result.pushProduct) {
                     this.classList.add('btn-active');
-                    this.innerText = 'Удалить из корзины';
+                    this.innerText = 'Удалить';
                 } else {
                     this.classList.remove('btn-active');
-                    this.innerText = 'Добавить в корзину';
+                    this.innerText = 'Купить';
                 }
             });
 
@@ -102,3 +101,4 @@ class ServiceProducts {
 
 var serviceProducts = new ServiceProducts('.container-products', '.container_counter', productsCatalog);
 //витрина
+
