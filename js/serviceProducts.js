@@ -51,6 +51,7 @@ class ServiceProducts {
                 var activeText = 'Удалить';
             }
 
+            
             var item  = serviceCreateElement.getElement({ tagName: 'div', className: 'item' });
             var name  = serviceCreateElement.getElement({ tagName: 'div', className: 'name', innerText: this.productsCatalog[i].name });
             var img   = serviceCreateElement.getElement({ tagName: 'div', className: 'img', backgroundImage: `url(${this.productsCatalog[i].img})` });
