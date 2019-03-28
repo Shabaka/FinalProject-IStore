@@ -16,8 +16,8 @@ class ServiceCart {
                 var item = serviceCreateElement.getElement({ tagName: 'div', className: 'item' });
                 var name = serviceCreateElement.getElement({ tagName: 'div', className: 'name', innerText: productsCart[i].name });
                 var img = serviceCreateElement.getElement({ tagName: 'div', className: 'img', backgroundImage: `url(${productsCart[i].img})` });
-                var price = serviceCreateElement.getElement({ tagName: 'div', className: 'price', innerText: productsCart[i].price.toLocaleString() + ' ₽' });
-               
+                var price = serviceCreateElement.getElement({ tagName: 'div', className: 'price', innerText: productsCart[i].price.toLocaleString()+ ' ₽' });
+
                 item.appendChild(name);
                 item.appendChild(img);
                 item.appendChild(price);
