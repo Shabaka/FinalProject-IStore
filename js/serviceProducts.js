@@ -51,12 +51,12 @@ class ServiceProducts {
                 var activeText = 'Удалить';
             }
 
-            
-            var item  = serviceCreateElement.getElement({ tagName: 'div', className: 'item' });
-            var name  = serviceCreateElement.getElement({ tagName: 'div', className: 'name', innerText: this.productsCatalog[i].name });
-            var img   = serviceCreateElement.getElement({ tagName: 'div', className: 'img', backgroundImage: `url(${this.productsCatalog[i].img})` });
+
+            var item = serviceCreateElement.getElement({ tagName: 'div', className: 'item' });
+            var name = serviceCreateElement.getElement({ tagName: 'div', className: 'name', innerText: this.productsCatalog[i].name });
+            var img = serviceCreateElement.getElement({ tagName: 'div', className: 'img', backgroundImage: `url(${this.productsCatalog[i].img})` });
             var price = serviceCreateElement.getElement({ tagName: 'div', className: 'price', innerText: this.productsCatalog[i].price.toLocaleString() + ' ₽' });
-            var btn   = serviceCreateElement.getElement({ tagName: 'button', className: 'btn' + activeClass, innerText: activeText, id: this.productsCatalog[i].id });
+            var btn = serviceCreateElement.getElement({ tagName: 'button', className: 'btn' + activeClass, innerText: activeText, id: this.productsCatalog[i].id });
 
             btn.addEventListener('click', function () {
                 var id = this.getAttribute('data-id');
@@ -82,22 +82,22 @@ class ServiceProducts {
         this.container.appendChild(wrapper);
     }
 
-    getElement(options) {
-        var element = document.createElement(options.tagName);
-        if ('className' in options) {
-            element.setAttribute('class', options.className);
-        }
-        if ('innerText' in options) {
-            element.innerText = options.innerText;
-        }
-        if ('backgroundImage' in options) {
-            element.style.backgroundImage = options.backgroundImage;
-        }
-        if ('id' in options) {
-            element.setAttribute('data-id', options.id);
-        }
-        return element;
-    }
+    // getElement(options) {
+    //     var element = document.createElement(options.tagName);
+    //     if ('className' in options) {
+    //         element.setAttribute('class', options.className);
+    //     }
+    //     if ('innerText' in options) {
+    //         element.innerText = options.innerText;
+    //     }
+    //     if ('backgroundImage' in options) {
+    //         element.style.backgroundImage = options.backgroundImage;
+    //     }
+    //     if ('id' in options) {
+    //         element.setAttribute('data-id', options.id);
+    //     }
+    //     return element;
+    // }
 }
 
 var serviceProducts = new ServiceProducts('.container-products', '.container_counter', productsCatalog);
